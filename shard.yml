@@ -1,0 +1,18 @@
+name: api_gateway
+version: 0.1.0
+
+authors:
+  - Alex Abramov <omgout.200@gmail.com>
+
+targets:
+  api_gateway:
+    main: src/api_gateway.cr
+
+dependencies:
+  kemal:
+    github: kemalcr/kemal
+
+
+crystal: '>= 1.16.3'
+
+license: MIT
