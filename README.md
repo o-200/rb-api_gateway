@@ -1,28 +1,12 @@
 # api_gateway
 
-TODO: Write a description here
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/5adc86c6-b13a-4038-a9be-dfc95de8fcf7" />
+
+
+Single entry point for all client requests in a microservices architecture, created only for my personal purposes, expirements and touching Crystal Programming Language.
 
 ## Installation
 
-TODO: Write installation instructions here
-
-## Usage
-
-TODO: Write usage instructions here
-
-## Development
-
-TODO: Write development instructions here
-
-## Contributing
-
-1. Fork it (<https://github.com/your-github-user/api_gateway/fork>)
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
-
-## Contributors
-
-- [Alex Abramov](https://github.com/your-github-user) - creator and maintainer
-# rb-api_gateway
+1. https://crystal-lang.org/install/
+2. Install packages - `shards install`
+3. Run app - `crystal run src/api_gateway.cr`
