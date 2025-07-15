@@ -17,7 +17,9 @@ module Gateway
         response = forward_request(context.request, forward_url)
         handle_response(context, response)
       rescue ex
-        LOG.error { "Error forwarding to #{forward_url}: #{ex.class}: #{ex.message}" }
+        LOG.error {
+          "Error forwarding to #{forward_url}: #{ex.class}: #{ex.message}, Exception: #{ex}"
+        }
 
         context.response.status_code = 502
         context.response.print "Bad Gateway"
@@ -42,7 +44,9 @@ module Gateway
       end
 
       if body = original_request.body
-        request.body = IO::Memory.new(body.gets_to_end)
+        body_data = body.gets_to_end
+        request.body = IO::Memory.new(body_data)
+        request.headers["Content-Length"] = body_data.bytesize.to_s
       end
 
       client.exec(request)
