@@ -1,4 +1,3 @@
 MICROSERVICES = {
-  "/users"  => "http://localhost:4000",
-  "/orders" => "http://localhost:4001"
+  "/auth"   => "http://localhost:3001",
 }
