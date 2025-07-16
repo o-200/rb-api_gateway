@@ -1,6 +1,6 @@
 require "http/client"
-require "../config"
-require "../logger"
+require "../config/config"
+require "../config/logger"
 
 module Gateway
   class Forwarder
