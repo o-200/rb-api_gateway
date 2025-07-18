@@ -7,7 +7,7 @@ COPY . .
 
 RUN shards install --verbose
 
-RUN crystal build src/api_gateway.cr --verbose --release --no-debug --static -o rb-api_gateway
+RUN crystal build src/rb-api_gateway.cr --verbose --release --no-debug --static -o rb-api_gateway
 
 # Final stage
 FROM alpine:latest
