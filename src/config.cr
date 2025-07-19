@@ -4,6 +4,9 @@ MICROSERVICES = {
     "paths":  {
       "register": "auth/register",
       "login":    "auth/login",
+      "logout":   "auth/logout",
+      "verify":   "auth/verify",
+      "refresh":  "auth/refresh",
     },
   },
 }
