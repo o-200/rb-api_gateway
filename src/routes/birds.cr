@@ -1,5 +1,5 @@
-get "/birds" do
-end
+require "../services/birds/*"
 
-post "/birds" do
+get "/birds/:user_id" do |env|
+  Birds::FindBirdsByUserIdService.new.call(env)
 end
