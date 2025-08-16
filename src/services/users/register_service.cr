@@ -4,13 +4,13 @@ require "../../gateway/forwarder"
 
 require "../../config"
 
-class Users::RefreshTokenService < ApplicationService
+class Users::RegisterService < ApplicationService
   include HTTP::Handler
 
   def call(context : HTTP::Server::Context)
     microservice_hash = MICROSERVICES["rb-user"]
     domain = microservice_hash["domain"]
-    path = microservice_hash["paths"]["refresh"]
+    path = microservice_hash["paths"]["user"]["register"]
 
     Gateway::Forwarder.new.call(context, domain, path)
     return context
